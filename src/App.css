@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+header, footer {
+  background-color: #333;
+  color: white;
+  padding: 1em 0;
+}
+
+section {
+  padding: 2em 0;
+}
+
