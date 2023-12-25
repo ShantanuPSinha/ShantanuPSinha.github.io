@@ -41,6 +41,7 @@ function App() {
       <Skills />
       <Contact />
       <Footer />
+      <h1 className="rainbow-text">Hi Rachael</h1>
     </div>
   );
 }

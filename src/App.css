@@ -57,3 +57,33 @@ section {
   padding: 2em 0;
 }
 
+
+@keyframes wave-animation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+}
+
+.rainbow-text {
+  font-size: 48px;
+  font-weight: bold;
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: wave-animation 2s infinite;
+  display: inline-block;
+}
+
+/* Ensure the animation is smooth */
+.rainbow-text:hover {
+  animation-play-state: running;
+}
