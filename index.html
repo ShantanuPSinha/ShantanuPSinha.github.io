@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Shantanu Sinha</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px; /* Increased depth for 3D effect */
+        }
+
+        .rainbow-text {
+            background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 148px;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            display: inline-block;
+            transform-style: preserve-3d;
+            text-shadow: 0px 0px 2px rgba(0,0,0,0.2); /* Soft shadow for depth */
+        }
+    </style>
+</head>
+<body>
+    <div id="text" class="rainbow-text">Hi Rachael</div>
+
+    <script>
+        const text = document.getElementById('text');
+        let angle = 0;
+
+        function wave() {
+            angle += 0.02; // Smoother increment
+            const angleSin = Math.sin(angle);
+            const angleCos = Math.cos(angle);
+            text.style.transform = `rotate3d(${angleSin}, ${angleCos}, 0, 5deg) translateZ(20px)`; // Smaller rotation, added 3D translation
+        }
+
+        setInterval(wave, 20); // Faster interval for smoother animation
+    </script>
+</body>
+</html>
